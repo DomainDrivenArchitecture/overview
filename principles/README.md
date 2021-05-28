@@ -3,18 +3,10 @@
   1. Jedes Element nur einmal testen
   2. möglichst billig testen
 3. YAGNI / KISS
-
-#Postel's Law:
-
-be conservative in what you do, be liberal in what you accept from others.
-
-https://martinfowler.com/bliki/TolerantReader.html
-
 5. DDD Aufteilung nutzen
   1. Domain isoliert - isoliert testbar
   2. Inputs / Outputs validieren
   3. Aggregate bilden
-6. Configuration ist dumm
 7. Wir programmieren in Programmiersprachen und nicht in XML / Template / yaml ...
 8. Gute Programmiersprachen erfinden ist schwierig, drum lassen wir das
 9. Microkernel

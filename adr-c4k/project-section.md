@@ -6,8 +6,6 @@ You can use [adr-tools](https://github.com/npryce/adr-tools) for managing the AD
 
 In each ADR file, write these sections:
 
-# Title
-
 ## Status
 
 What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
