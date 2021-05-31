@@ -32,7 +32,7 @@ Discussion about project-section in general
 
 ## Decision
 
-[](project-section-artifact.png)
+![project-section-artifact.png](project-section-artifact.png)
 
 1. We move common used code (predicates for spec, config handling with aero, gopass resolution, yaml serialization and encoding) to c4k-common project.
 2. For cli & web frontend code we accept redundancy till we've a clearer picture on how to extract commons
