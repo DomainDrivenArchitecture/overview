@@ -1,0 +1,25 @@
+@startuml
+artifact common [
+<b>c4k-common
+---
+contains commonly used stuff for Convention4Kubernetes modules.
+===
+
+predicates, config handling with aero, gopass resolution, yaml serialization and encoding.
+]
+
+artifact mbot [
+<b>c4k-mastodon-bot
+---
+Module generating k8s deployments for mastodon-bot.
+]
+mbot -> common
+
+artifact kc [
+<b>c4k-keycloak
+---
+Module generating k8s deployments for keycloak.
+]
+kc -> common
+@enduml
+
