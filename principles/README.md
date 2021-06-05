@@ -1,4 +1,4 @@
-1. Schnitt: Erst fachlich, dann technisch
+
 2. Tests: 
   1. Jedes Element nur einmal testen
   2. möglichst billig testen
