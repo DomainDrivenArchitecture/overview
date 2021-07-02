@@ -44,3 +44,11 @@ as well as important advantages of the **declarative** paradigm, such as:
 * no need to check nor remember the system state.
 
 We call this "implarative".
+
+## Clear results overview
+
+With provisioning you hope everything goes fine but of course also errors can occur.
+To be able to solve potential problems it is important to get clear information what are the steps performed and where did it go wrong and why.
+So, while for successful executions it is nice to have, in case of errors it is essential to get a clear results overview.
+
+![](/resources/images/results-overview.png)
