@@ -17,14 +17,3 @@ We want to be able to execute single provision steps to apply partial installati
 General points to keep in mind:
 - Dependencies
 - Transport of credentials
-
-## Decision
-
-* Wir repräsentieren unsere Configuration
-
-* Wir nutzen erst mal die Struktur von DDD application / domain / infrastructure - unter Vorbehalt
-  * Vorbehalt1: besseren Namen für fachliches finden
-  * Vorbehalt2: entscheiden, was in der domain testbar sein muss
-  
-
-
