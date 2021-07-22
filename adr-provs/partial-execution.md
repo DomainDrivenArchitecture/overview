@@ -25,5 +25,3 @@ We want to be able to execute single provision steps to apply partial installati
   * Vorbehalt2: entscheiden, was in der domain testbar sein muss
 
 * Wir nutzen nur einschichtige Konfiguration, da wir nur noch uns selbst als Nutzerkreis ansehen.
-
-
