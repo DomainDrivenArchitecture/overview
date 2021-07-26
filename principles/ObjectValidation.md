@@ -22,6 +22,12 @@ Most languages are offering the following possibilities for failure handling:
 * Return values
 * Exceptions
 
+### Context
+
+Validations can be 
+* context-dependent
+* context-independent
+
 ### Validation time
 * Before object creation
 * After creation (but before actual usage of the data)
@@ -45,35 +51,51 @@ Most languages are offering the following possibilities for failure handling:
 
 ## Potential strategies
 
-### Strategies for validations after object creation 
-(From https://enterprisecraftsmanship.com/posts/validation-and-ddd/):
-  * The Execute / TryExecute pattern works best for task-based scenarios.
-  * For CRUD scenarios, you need to choose between Execute / TryExecute and validation in application services. The choice comes down to purity versus ease of implementation.
+When putting the basics above together, you might consider the strategies below.
 
-### Strategies for validations before object creation
+### For mutable or context-dependent objects  
+Use strategies for validations **after** object creation 
+(from https://enterprisecraftsmanship.com/posts/validation-and-ddd/):
+* The Execute / TryExecute pattern works best for task-based scenarios.
+* For CRUD scenarios, you need to choose between Execute / TryExecute and validation in application services. The choice comes down to purity versus ease of implementation.
 
-  * With (static/class level) validation AND factory method (for less complex cases)
-  * Essence pattern (for complex cases)
+### Immutable and context-independent objects
 
-### Strategies for validation results:
-* Detailed, containing a list of violations => for crud operations of multi-field input
-* Simple: reporting one violation either with a simple or a generic message => for task-based operations (user just wants to execute a task and wants to know if the task was successful or not resp. why not)
+Use validations **before** object creation 
+(first, you may want to validate as early as possible, 
+and secondly, it normally makes no sense to create object that never will be valid.)
 
-### Technical mechanisms:
-* Return value for “expected” failures
-* Exception for “unexpected” failures
+* Factory method AND validation method (for less complex cases) 
+  * Note: validation method must be static/at class level
+* Essence pattern (for more complex cases)
+
+### Validation results
+Consider
+* Detailed results (containing a list of violations) 
+    * for crud-y operations e.g. when using multi-field input
+* Simple results 
+  * if detailed results would add no benefits, e.g. for task-based operations (if user just wants to execute a task and/or just wants to know if the task was successful or not resp. why not)
+
+### Technical mechanisms
+
+* Return values 
+  * for “expected” failures
+* Exceptions 
+  * for “unexpected” failures
 
 https://stackoverflow.com/questions/99683/which-and-why-do-you-prefer-exceptions-or-return-codes
 https://stackoverflow.com/questions/5460101/choosing-between-exception-and-return-value
 https://enterprisecraftsmanship.com/posts/error-handling-exception-or-result/
 
+
 ---
 ###Appendix
-Possibilities for creation of objects (patterns, etc):
+
+Object creation (patterns, etc):
 * Constructor
 * Factory method (e.g. create method)
 * Factory
 * Builder
 * Essence
 * Other creational patterns: Prototype, Object Pool, Abstract Factory, Singleton
-      
+
