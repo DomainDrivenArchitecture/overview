@@ -23,12 +23,12 @@ We follow the principle "build from scratch", so we leave the question of softwa
 ## Consequence
 
 1. add / change (a line) in existing files
-   1. Solution: Query for changed location respecting the file type / format and skip if it was already performed. We try to avoid this case and use separate files instead of modifying existing ones.
+   * Solution: Query for changed location respecting the file type / format and skip if it was already performed. We try to avoid this case and use separate files instead of modifying existing ones.
 2. installation of an single / directory file
-   1. Solution: If the file/directory exists, we consider installation successful and skip this step in another installation run
+   * Solution: If the file/directory exists, we consider installation successful and skip this step in another installation run
 3. installation of many files/directories
-   1. Solution: If the last file/directory exists, we consider installation successful and skip this step in another installation run - this is useful in order to skip time consuming steps. For fast / trivial steps we can choose solution 2.
+   * Solution: If the last file/directory exists, we consider installation successful and skip this step in another installation run - this is useful in order to skip time consuming steps. For fast / trivial steps we can choose solution 2.
 4. install apt/deb package
-   1. Solution: Query whether package (name without version) is installed (either implicitly e.g. in case of apt or explicitly in other cases to avoid unnecessary downloads etc)
+   * Solution: Query whether package (name without version) is installed (either implicitly e.g. in case of apt or explicitly in other cases to avoid unnecessary downloads etc)
 5. running docker containers
-   1. Solution: Query whether  container with name (we have to provide the name on container start) is already running
+   * Solution: Query whether  container with name (we have to provide the name on container start) is already running
